@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./BookingForm.css"; // CSS för styling
 
 function BookingForm() {
-  
+  // Skapa state för varje inputfält
   const [travelClass, setTravelClass] = useState("2a klass"); // Standardval
   const [ticketAmount, setTicketAmount] = useState("1");
   const [title, setTitle] = useState("Ms.");
@@ -26,15 +26,10 @@ function BookingForm() {
 
   return (
     <div className="booking-container">
-  {/* Header-sektionen för rubriken */}
-  <div className="header">
-    <h2>ÅKA TÅG</h2>
-  </div>
-
-  {/* Rutt-information */}
-  <div className="route">
-    <strong>STOCKHOLM</strong> → <strong>GÖTEBORG</strong>
-  </div>
+      <h2>ÅKA TÅG</h2>
+      <div className="route">
+        <strong>STOCKHOLM</strong> → <strong>GÖTEBORG</strong>
+      </div>
 
       {/* Klassval */}
       <div className="class-selection">

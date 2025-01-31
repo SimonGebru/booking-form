@@ -42,6 +42,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    
   }
   
   .submit-button {
@@ -66,7 +67,23 @@
   }
   
   .input-container {
-    flex: 1; /* Gör att båda inputfälten blir lika breda */
+    flex: 1; 
   }
 
-  
+/* Förhindra dark mode-effekter */
+body {
+    background-color: white !important; 
+    color: black !important;  
+}
+
+
+input, select {
+    background-color: white !important;  
+    color: black !important;  
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: black; 
+}
