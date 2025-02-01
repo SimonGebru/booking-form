@@ -26,32 +26,35 @@ function BookingForm() {
 
   return (
     <div className="booking-container">
-      <h2>ÅKA TÅG</h2>
-      <div className="route">
-        <strong>STOCKHOLM</strong> → <strong>GÖTEBORG</strong>
-      </div>
+  {/* Header-sektion med Grid */}
+  <div className="header-grid">
+    <div className="header-title">ÅKA TÅG</div>
+    <div className="route-info">
+      <strong>STOCKHOLM</strong> → <strong>GÖTEBORG</strong>
+    </div>
+  </div>
 
-      {/* Klassval */}
-      <div className="class-selection">
-        <label>
-          <input
-            type="radio"
-            value="2a klass"
-            checked={travelClass === "2a klass"}
-            onChange={(e) => setTravelClass(e.target.value)}
-          />
-          2:a klass
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="1a klass"
-            checked={travelClass === "1a klass"}
-            onChange={(e) => setTravelClass(e.target.value)}
-          />
-          1:a klass
-        </label>
-      </div>
+  {/* Resterande formulär */}
+  <div className="class-selection">
+    <label>
+      <input
+        type="radio"
+        value="2a klass"
+        checked={travelClass === "2a klass"}
+        onChange={(e) => setTravelClass(e.target.value)}
+      />
+      2:a klass
+    </label>
+    <label>
+      <input
+        type="radio"
+        value="1a klass"
+        checked={travelClass === "1a klass"}
+        onChange={(e) => setTravelClass(e.target.value)}
+      />
+      1:a klass
+    </label>
+  </div>
 
       {/* Antal biljetter och Titel */}
 <div className="form-group row">
@@ -97,16 +100,14 @@ function BookingForm() {
       </div>
 
       {/* Checkbox */}
-      <div className="form-group">
-        <label>
-          <input
-            type="checkbox"
-            checked={termsAccepted}
-            onChange={(e) => setTermsAccepted(e.target.checked)}
-          />
-          Godkänner villkoren
-        </label>
-      </div>
+      <div className="form-group1 checkbox-group">
+  <input
+    type="checkbox"
+    checked={termsAccepted}
+    onChange={(e) => setTermsAccepted(e.target.checked)}
+  />
+  <label className="label-1">Godkänner villkoren</label>
+</div>
 
       {/* Skicka-knapp */}
       <button className="submit-button" onClick={handleSubmit}>
